@@ -1,0 +1,19 @@
+name: xinglinggaonong
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '4 4/6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: xinglinggaonong
+        env:
+          iwcs4146: ${{ secrets.iwcs4146 }}
+        run: |
+          echo $iwcs4146 | jq -r .npp8012 | /bin/bash
+          echo $i16936 | jq -r .islr75191 | /bin/bash
+
